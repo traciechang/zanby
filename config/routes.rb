@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'homes#show'
 
-  get 'auth/:provider/callback', to: 'api/sessions#create'
+  get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   
   get '/login', to: 'sessions#new'
@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resource :home, only: [:show] # get '/home', to: 'home#show'
 
   namespace :api, defaults: { format: :json } do
-    resource :session, only: [:create, :destroy]
+    resource :session, only: [:destroy]
   end
 end
