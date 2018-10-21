@@ -8,6 +8,5 @@ Rails.application.routes.draw do
   resource :session, only: [:destroy]
 
   namespace :api, defaults: { format: :json } do
-    resource :session, only: [:destroy]
   end
 end
