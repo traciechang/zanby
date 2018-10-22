@@ -15,11 +15,20 @@ RSpec.describe SessionsController, type: :controller do
         end
     end
 
-    describe 'POST create' do
+    describe 'POST create', type: :request do
         it "makes a post request" do
-            get '/auth/google_oauth2/callback'
+            OmniAuth.config.test_mode = true
 
-            expect(response).to eq(201)
+            OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+                provider: 'google_oauth2',
+                uid: '12345',
+                info: {
+                    email: 'pusheen@pusheencorp.com'
+                }
+            })
+
+            get '/auth/google_oauth2/callback'
+            expect(response.status).to eq(302)
         end
     end
 
