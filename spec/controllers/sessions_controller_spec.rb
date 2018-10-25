@@ -53,6 +53,24 @@ RSpec.describe SessionsController, type: :controller do
         end
     end
 
-    describe 'DELETE destroy' do
+    describe 'DELETE destroy', type: :request do
+        before do
+            OmniAuth.config.test_mode = true
+
+            OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+                provider: 'google_oauth2',
+                uid: '12345',
+                info: {
+                    email: 'pusheen@pusheencorp.com'
+                }
+            })
+        end
+
+        it "logs the user out" do
+            get '/auth/google_oauth2/callback'
+            expect(session[:user_id]).to_not eq(nil)
+            delete session_url
+            expect(session[:user_id]).to eq(nil)
+        end
     end
 end
