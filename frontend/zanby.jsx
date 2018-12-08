@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let store = configureStore();
 
     
-    ReactDOM.render(<SnakeIndex/>, document.getElementById('root'));
-    // ReactDOM.render(<Root store={store}/>, document.getElementById('root'));
+    // ReactDOM.render(<SnakeIndex/>, document.getElementById('root'));
+    ReactDOM.render(<Root store={store}/>, document.getElementById('root'));
 });
