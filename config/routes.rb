@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resource :current_user, only: [:show]
+    resources :snakes, only: [:index, :show]
   end
 end

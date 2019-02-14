@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# stormy = User.create(provider: "gmail", uid: "123", email: "stormy@pusheencorp.com")
+
+Snake.create(user_id: 1, custom_id: "Pbrong-2016-TBC-M03", species: "Python brongersmai", common_name: "Blood Python", locality: "Sumatra", date_of_birth: "2016-07-01", sex: "Male", produced_by: "The Blood Cell", acquired_from: "Kara Norris", date_acquired: "2016-09-20", notes: "raspberry lineage")

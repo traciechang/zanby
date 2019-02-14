@@ -5,10 +5,25 @@ class SnakeIndex extends React.Component {
         super(props);
     }
 
+    // displayAllSnakes = () => {
+
+    // }
+
     render() {
         return (
             <div>
-                It's happening!
+                <ul>
+                    <li>Id</li>
+                    <li>Name</li>
+                    <li>Species</li>
+                    <li>Common Name</li>
+                </ul>
+                <ul>
+                    <li>1</li>
+                    <li>Valak</li>
+                    <li>Boa Constrictor Constrictor</li>
+                    <li>Red-Tailed Boa Constrictor</li>
+                </ul>
             </div>
         )
     }

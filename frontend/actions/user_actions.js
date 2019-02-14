@@ -7,8 +7,9 @@ export const receiveCurrentUser = (currentUser) => ({
     currentUser
 });
 
-export const fetchCurrentUser = () => dispatch => (
-    UserAPIUtil.fetchCurrentUser().then(response => {
+export const fetchCurrentUser = () => dispatch => {
+    console.log("fetching")
+    return UserAPIUtil.fetchCurrentUser().then(response => {
         dispatch(receiveCurrentUser(response))
     })
-);
+};
