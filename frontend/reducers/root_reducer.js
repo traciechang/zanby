@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { entitiesReducer } from "";
+import { entitiesReducer } from "./entities_reducer";
 import { sessionReducer } from "./session_reducer";
 
 const rootReducer = combineReducers({

@@ -17,11 +17,12 @@ class SnakeSearchAndIndex extends React.Component {
         return (
             <div>
                 <SearchFormContainer/>
-                <SnakeIndex/>
+                <SnakeIndex snakes={this.props.snakes}/>
             </div>
               
         )
     }
 }
+
 
 export default SnakeSearchAndIndex;

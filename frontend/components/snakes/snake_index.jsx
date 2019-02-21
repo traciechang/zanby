@@ -1,13 +1,20 @@
 import React from "react";
+import SnakeIndexDetail from "./snake_index_detail";
 
 class SnakeIndex extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    // displayAllSnakes = () => {
+    displayAllSnakes = () => {
+        const { snakes } = this.props;
 
-    // }
+        return Object.keys(snakes).map(key => {
+            return (
+                <li key={key}><SnakeIndexDetail snake={snakes[key]}/></li>
+            )
+        })
+    }
 
     render() {
         return (
@@ -16,14 +23,10 @@ class SnakeIndex extends React.Component {
                     <li>Id</li>
                     <li>Name</li>
                     <li>Species</li>
-                    <li>Common Name</li>
+                    <li>Sex</li>
+                    <li>DOB</li>
                 </ul>
-                <ul>
-                    <li>1</li>
-                    <li>Valak</li>
-                    <li>Boa Constrictor Constrictor</li>
-                    <li>Red-Tailed Boa Constrictor</li>
-                </ul>
+                <ul>{this.displayAllSnakes()}</ul>
             </div>
         )
     }

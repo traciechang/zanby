@@ -4,7 +4,8 @@ import { fetchSnakes } from "../../actions/snake_actions";
 import SnakeSearchAndIndex from "./snake_search_and_index";
 
 const mapStateToProps = state => ({
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    snakes: state.entities.snakes
 });
 
 const mapDispatchToProps = dispatch => ({
