@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181001034836) do
+ActiveRecord::Schema.define(version: 20181211193312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "snakes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "custom_id", null: false
+    t.string "name"
+    t.string "species"
+    t.string "common_name"
+    t.string "locality"
+    t.string "morph"
+    t.date "date_of_birth"
+    t.date "date_of_death"
+    t.string "sex"
+    t.string "produced_by"
+    t.string "acquired_from"
+    t.date "date_acquired"
+    t.date "date_transferred"
+    t.text "notes"
+    t.boolean "for_sale", default: false, null: false
+    t.string "image_url"
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", null: false
@@ -21,6 +44,8 @@ ActiveRecord::Schema.define(version: 20181001034836) do
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "session_token"
+    t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
