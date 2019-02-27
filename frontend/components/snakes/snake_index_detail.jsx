@@ -5,17 +5,22 @@ class SnakeIndexDetail extends React.Component {
         super(props);
     }
 
+    displayBirthYear() {
+        let year = this.props.snake.date_of_birth
+        return year.substr(0,4)
+    }
+
     render() {
         const { snake } = this.props;
 
         return (
-            <div>
-                <ul>
-                    <li>{snake.custom_id}</li>
-                    <li>{snake.name}</li>
-                    <li>{snake.species}</li>
-                    <li>{snake.sex}</li>
-                    <li>{snake.date_of_birth}</li>
+            <div class="snake-index-detail">
+                <ul class="row justify-content-between">
+                    <li class="col-lg-2">{snake.custom_id}</li>
+                    <li class="col-lg-2">{snake.name}</li>
+                    <li class="col-lg-2">{snake.species}</li>
+                    <li class="col-lg-2">{snake.sex}</li>
+                    <li class="col-lg-2">{this.displayBirthYear()}</li>
                 </ul>
             </div>
         )

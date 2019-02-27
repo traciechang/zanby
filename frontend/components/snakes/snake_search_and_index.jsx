@@ -15,7 +15,7 @@ class SnakeSearchAndIndex extends React.Component {
 
     render() {
         return (
-            <div>
+            <div class="snake-search-and-index">
                 <SearchFormContainer/>
                 <SnakeIndex snakes={this.props.snakes}/>
             </div>
