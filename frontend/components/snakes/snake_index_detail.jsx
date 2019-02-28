@@ -16,11 +16,11 @@ class SnakeIndexDetail extends React.Component {
         return (
             <div class="snake-index-detail">
                 <ul class="row justify-content-between">
-                    <li class="col-lg-2">{snake.custom_id}</li>
+                    <li class="col-lg-3">{snake.custom_id}</li>
                     <li class="col-lg-2">{snake.name}</li>
-                    <li class="col-lg-2">{snake.species}</li>
-                    <li class="col-lg-2">{snake.sex}</li>
-                    <li class="col-lg-2">{this.displayBirthYear()}</li>
+                    <li class="col-lg-3">{snake.species}</li>
+                    <li class="col-lg-1">{snake.sex}</li>
+                    <li class="col-lg-1">{this.displayBirthYear()}</li>
                 </ul>
             </div>
         )

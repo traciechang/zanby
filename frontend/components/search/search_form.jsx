@@ -26,8 +26,8 @@ class SearchForm extends React.Component {
         ))
 
         return (
-            <select>
-                <option value="" selected>All</option>
+            <select class="browser-default custom-select col-lg-1">
+                <option value="" selected>Sex (All)</option>
                 {sex}
             </select>
         )
@@ -39,8 +39,8 @@ class SearchForm extends React.Component {
         ))
 
         return (
-            <select>
-                <option value="" selected>All</option>
+            <select class="browser-default custom-select col-lg-2">
+                <option value="" selected>Species (All)</option>
                 {species}
             </select>
         )
@@ -52,21 +52,26 @@ class SearchForm extends React.Component {
 
     render() {
         return (
-            <div class="search-form">
-                <form class="text-light">
-                    <label>ID</label>
-                    <input />
+            <div class="search-form row justify-content-between">
+                <div class="col-lg-2 text-light search-form-title">Manager</div>
 
-                    <label>Name</label>
-                    <input />
+                <form class="form-inline md-form form-sm mt-0 col-lg-2">
+                    <i class="fas fa-search text-light" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="ID" aria-label="Search"/>
+                </form>
 
-                    <label>Species</label>
-                    {this.displaySpecies()}
+                <form class="form-inline md-form form-sm mt-0 col-lg-2">
+                    <i class="fas fa-search text-light" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Name" aria-label="Search"/>
+                </form>
 
-                    <label>Sex</label>
-                    {this.displaySex()}
+                {this.displaySpecies()}
 
-                    <label>Year</label>
+                {this.displaySex()}
+
+                <form class="form-inline md-form form-sm mt-0 col-lg-2">
+                    <i class="fas fa-search text-light" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Year" aria-label="Search"/>
                 </form>
             </div>
         )

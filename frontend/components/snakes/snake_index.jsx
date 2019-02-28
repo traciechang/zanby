@@ -20,11 +20,11 @@ class SnakeIndex extends React.Component {
         return (
             <div class="snake-index">
                 <ul class="row snake-index-headers justify-content-between">
-                    <li class="col-lg-2">Id</li>
+                    <li class="col-lg-3">Id</li>
                     <li class="col-lg-2">Name</li>
-                    <li class="col-lg-2">Species</li>
-                    <li class="col-lg-2">Sex</li>
-                    <li class="col-lg-2">DOB</li>
+                    <li class="col-lg-3">Species</li>
+                    <li class="col-lg-1">Sex</li>
+                    <li class="col-lg-1">Year</li>
                 </ul>
                 <ul class="snake-index-list">{this.displayAllSnakes()}</ul>
             </div>
