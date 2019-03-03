@@ -17,6 +17,10 @@
  */
 
 // General
+// body, html, #root, .app {
+//     height: 100%;
+// }
+
 * {
     font-family: 'Lato', sans-serif;
 }
@@ -46,22 +50,39 @@ body {
 
 .search-form > * {
     font-size: 12px;
-    border: 2px solid pink;
+    // border: 2px solid pink;
 }
 
-.search-form > form {
-    padding: 0;
+.search-form > form > input {
+    font-size: 12px;
 }
 
 .search-form-title {
-    font-size: 14px;
+    font-size: 18px;
     padding-top: 7px;
+}
+
+.search-and-reset {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-and-reset > button {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.search-and-reset > a {
+    text-align: center;
+    // text-decoration: underline;
+    cursor: pointer;
 }
 
  /* Snake Index */
 .snake-index {
     background-color: #ffffff;
     border: 2px solid green;
+    height: 64vh;
 }
 
 .snake-index-headers {
@@ -75,12 +96,17 @@ body {
     padding: 5px;
     color: #6b7a86;
     font-size: 12px;
+    // border: 2px solid brown;
 }
 
 .snake-index-list {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0px;
     border: 2px solid fuchsia;
+    height: 94%;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 /* Snake Index Detail */
@@ -98,6 +124,20 @@ body {
     // padding: 20px;
     // color: #6b7a86;
     // font-size: 12px;
+}
+.snake-index-detail > ul > li {
+    padding-left: 5px;
+    // border: 2px solid brown;
+}
+.snake-detail-image {
+    height: auto;
+    width: auto;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: -20px;
 }
 
 // Footer

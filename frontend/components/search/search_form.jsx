@@ -53,26 +53,33 @@ class SearchForm extends React.Component {
     render() {
         return (
             <div class="search-form row justify-content-between">
-                <div class="col-lg-2 text-light search-form-title">Manager</div>
-
+            {/* <div class="search-form-top row justify-content-between"> */}
+                <div class="col-lg-1.5 text-light search-form-title">Manager</div>
+                
                 <form class="form-inline md-form form-sm mt-0 col-lg-2">
                     <i class="fas fa-search text-light" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="ID" aria-label="Search"/>
+                    <input class="form-control form-control-sm ml-1 w-75" type="text" placeholder="ID" aria-label="Search"/>
                 </form>
 
                 <form class="form-inline md-form form-sm mt-0 col-lg-2">
                     <i class="fas fa-search text-light" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Name" aria-label="Search"/>
+                    <input class="form-control form-control-sm ml-1 w-75" type="text" placeholder="Name" aria-label="Search"/>
+                </form>
+
+                <form class="form-inline md-form form-sm mt-0 col-lg-1.5">
+                    <i class="fas fa-search text-light" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-1 w-50" type="text" placeholder="Year" aria-label="Search"/>
                 </form>
 
                 {this.displaySpecies()}
 
                 {this.displaySex()}
 
-                <form class="form-inline md-form form-sm mt-0 col-lg-2">
-                    <i class="fas fa-search text-light" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Year" aria-label="Search"/>
-                </form>
+                <div class="search-and-reset col-lg-1">
+                    <button>Search</button>
+                    <a class="text-light">Reset</a>
+                </div>
+            {/* </div> */}
             </div>
         )
     }

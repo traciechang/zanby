@@ -16,6 +16,7 @@ class SnakeIndexDetail extends React.Component {
         return (
             <div class="snake-index-detail">
                 <ul class="row justify-content-between">
+                    <li class="col-lg-1 test"><img class="snake-detail-image" src={snake.image_url}/></li>
                     <li class="col-lg-3">{snake.custom_id}</li>
                     <li class="col-lg-2">{snake.name}</li>
                     <li class="col-lg-3">{snake.species}</li>
