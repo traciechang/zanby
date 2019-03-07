@@ -20,4 +20,8 @@ class Api::SnakesController < ApplicationController
     # def snake_params
     #     params.require(:snake).permit()
     # end
+
+    def snake_search_params
+        params.permit(:id, :name, :year, :sex, :species)
+    end
 end

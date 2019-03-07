@@ -16,8 +16,17 @@ class SearchForm extends React.Component {
         super(props);
 
         this.state = {
-
+            id: undefined,
+            name: undefined,
+            year: undefined,
+            sex: undefined,
+            species: undefined
         }
+    }
+
+    clearSearch = (e) => {
+        e.preventDefault();
+        
     }
 
     displaySex = () => {
@@ -53,7 +62,6 @@ class SearchForm extends React.Component {
     render() {
         return (
             <div class="search-form row justify-content-between">
-            {/* <div class="search-form-top row justify-content-between"> */}
                 <div class="col-lg-1.5 text-light search-form-title">Manager</div>
                 
                 <form class="form-inline md-form form-sm mt-0 col-lg-2">
@@ -79,7 +87,6 @@ class SearchForm extends React.Component {
                     <button>Search</button>
                     <a class="text-light">Reset</a>
                 </div>
-            {/* </div> */}
             </div>
         )
     }
