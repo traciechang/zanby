@@ -45,7 +45,7 @@ body {
     padding: 30px 20px 30px 20px;
     background-color: #214e60;
     margin: 0;
-    border: 2px solid red;
+    // border: 2px solid red;
 }
 
 .search-form > * {
@@ -80,7 +80,7 @@ body {
  /* Snake Index */
 .snake-index {
     background-color: #ffffff;
-    border: 2px solid green;
+    // border: 2px solid green;
     height: 64vh;
 }
 
@@ -88,7 +88,7 @@ body {
     list-style: none;
     border-bottom: 1px solid #e7e7e7;
     margin: 0;
-    border: 2px solid royalblue;
+    // border: 2px solid royalblue;
 }
 
 .snake-index-headers > li {
@@ -102,7 +102,7 @@ body {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0px;
-    border: 2px solid fuchsia;
+    // border: 2px solid fuchsia;
     height: 94%;
     overflow: hidden;
     overflow-y: scroll;
@@ -110,11 +110,15 @@ body {
 
 /* Snake Index Detail */
 .snake-index-detail {
-    border: 2px solid purple;
+    cursor: pointer;
     border-bottom: 1px solid #e7e7e7;
     padding: 20px;
     color: #6b7a86;
     font-size: 12px;
+}
+
+.snake-index-detail:hover {
+    background: lightblue;
 }
 
 .snake-index-detail > ul {

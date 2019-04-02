@@ -33,8 +33,6 @@ class Snake < ApplicationRecord
             start_date = "1/1/#{year_str}".to_date
             last_date = "31/12/#{year_str}".to_date
             Snake.where('date_of_birth >= ? AND date_of_birth <= ?', start_date, last_date)
-        # else
-        #     []
         end
     }
 end
